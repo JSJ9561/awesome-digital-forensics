@@ -25,4 +25,7 @@
 - 네트워크 포렌식: 네트워크 패킷, 네트워크 장비 로그, 네트워크 관련 설정
 - 모바일 포렌식: 모바일 디바이스(저장소, 메모리), IOT 디바이스
 
-## 디스크 이미징과 마운트, 메모리 덤
+## 디스크 이미징과 마운트, 메모리 덤프
+
+### FTK Imager 설치
+1. https://www.exterro.com/digital-forensics-software/ftk-imager 공식사이트에 들어가서 Free Download를 클릭합니다.
