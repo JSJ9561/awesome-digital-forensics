@@ -1,5 +1,19 @@
 # 설치 환경 조작이 따로 필요하지 않은 Default 설치 툴은 다운로드 사이트만 작성했습니다.
 
+## 🛠️ 디지털 포렌식 핵심 도구 요약
+
+| 도구명 | 주요 용도 (한 줄 요약) | 공식 링크 |
+| :--- | :--- | :--- |
+| **FTK Imager** | 원본 오염 방지 및 무결성을 유지한 저장매체 이미징(복제) 및 분석 | [공식 사이트](https://www.exterro.com/digital-forensics-software/ftk-imager) |
+| **HxD** | 파일 내부 16진수 데이터 확인/수정 및 파일 시그니처 위변조 식별 | [공식 사이트](https://mh-nexus.de/en/hxd/) |
+| **Everything** | MFT 기반 시스템 내 특정 파일 및 확장자 초고속 검색 | [공식 사이트](https://www.voidtools.com/ko-kr/) |
+| **7-Zip** | 포렌식 대용량 데이터 및 아카이브 파일의 손실 없는 압축/해제 | [공식 사이트](https://www.7-zip.org/) |
+| **Notepad++** | 다양한 인코딩 지원으로 대용량 로그 및 아티팩트 텍스트 분석 | [공식 사이트](https://notepad-plus-plus.org/) |
+| **Autopsy** | 디스크·모바일·메모리 종합 분석 및 타임라인/웹 흔적 추출 플랫폼 | [공식 사이트](https://www.autopsy.com/) |
+| **Sysinternals Suite** | 프로세스, 네트워크, 레지스트리 등 실시간 시스템 상태 및 활성 데이터 분석 | [공식 사이트](https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite) |
+
+---
+
 ## FTK Imager 설치
 
 ### 용도
