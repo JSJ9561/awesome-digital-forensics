@@ -85,7 +85,7 @@
 
 <img width="767" height="508" alt="스크린샷 2026-07-09 222240" src="https://github.com/user-attachments/assets/256beca5-c04a-4848-8f89-cdd4a8b6bed7" />
 
-### 3. 다운로드 받은 MSI 파일을 실행하고 설치 경로만 설정하면 Default 설치됩니다.
+### 3. 다운로드 받은 MSI 파일을 실행하고 설치 경로만 설정하면 Default 설치됩니다.(경로는 ASCII 문자 형식 즉, 한글 경로는 포함되면 안됩니다)
 
 ## SysinteralsSuite
 
