@@ -1,7 +1,7 @@
 # 설치 환경 조작이 따로 필요하지 않은 Default 설치 툴은 다운로드 사이트만 작성했습니다.
 
 ## FTK Imager 설치
-### 1. https://www.exterro.com/digital-forensics-software/ftk-imager 공식사이트에 들어가서 Free Download를 클릭합니다.
+### 1. [https://www.exterro.com/digital-forensics-software/ftk-imager] 공식사이트에 들어가서 Free Download를 클릭합니다.
 
 <img width="806" height="513" alt="KakaoTalk_Snapshot_20260709_215126" src="https://github.com/user-attachments/assets/bee4bf76-5500-4794-8a0d-2de66c6f4f0a" />
 
@@ -29,7 +29,7 @@
 
 ## HxD 설치
 
-### 1. https://mh-nexus.de/en/hxd/ 공식 홈페이지에서 조금만 스크롤을 내리면 다운로드 링크가 나옵니다. 전 Windows11이라 표시된 부분에서 다운로드 받았습니다.
+### 1. [https://mh-nexus.de/en/hxd/] 공식 홈페이지에서 조금만 스크롤을 내리면 다운로드 링크가 나옵니다. 전 Windows11이라 표시된 부분에서 다운로드 받았습니다.
 
 <img width="809" height="443" alt="스크린샷 2026-07-09 221429" src="https://github.com/user-attachments/assets/d256ee67-8a42-4de9-9adf-d859f123a07e" />
 
@@ -41,7 +41,7 @@
 
 ## Everything 설치
 
-### 1. https://www.voidtools.com/ko-kr/ 공식 홈페이지에서 64비트 설치파일을 다운로드합니다.(전 압축파일이 더 좋아서 압축파일로 받았습니다.)
+### 1. [https://www.voidtools.com/ko-kr/] 공식 홈페이지에서 64비트 설치파일을 다운로드합니다.(전 압축파일이 더 좋아서 압축파일로 받았습니다.)
 
 <img width="791" height="535" alt="스크린샷 2026-07-09 221608" src="https://github.com/user-attachments/assets/194a1af3-b837-4537-9aeb-fcb234b2dba0" />
 
@@ -53,7 +53,7 @@
 
 ## 7ZIP 설치
 
-### 1. https://www.7-zip.org/ 공식 홈페이지에서 다운로드를 클릭합니다
+### 1. [https://www.7-zip.org/] 공식 홈페이지에서 다운로드를 클릭합니다
 
 <img width="777" height="488" alt="스크린샷 2026-07-09 221723" src="https://github.com/user-attachments/assets/d0cb9aad-dd76-4b3b-be08-791d3574f484" />
 
@@ -63,9 +63,9 @@
 
 ### 3. 다운로드한 exe 파일을 실행합니다. 설치 경로만 설정하면 자동으로 설치됩니다.
 
-## notped++ 설치
+## Notepad++ 설치
 
-### 1. https://notepad-plus-plus.org/ 공식 홈페이지에서 다운로드를 클릭합니다.
+### 1. [https://notepad-plus-plus.org/] 공식 홈페이지에서 다운로드를 클릭합니다.
 
 ### 2. 설치할 버전을 선택합니다.
 
@@ -79,7 +79,7 @@
 
 ## Autopsy 설치
 
-### 1. https://www.autopsy.com/ 공식 홈페이지에서 다운로드를 클릭합니다.
+### 1. [https://www.autopsy.com/] 공식 홈페이지에서 다운로드를 클릭합니다.
 
 ### 2. 본인 컴퓨터 사양에 맞는 프로그램을 다운로드합니다. Windows 사용자는 MSI 형식으로 다운로드됩니다.
 
@@ -89,7 +89,7 @@
 
 ## SysinteralsSuite
 
-### 1. https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite 공식 홈페이지에서 다운로드를 클릭하면 zip 파일로 자동 다운로드됩니다.
+### 1. [https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite] 공식 홈페이지에서 다운로드를 클릭하면 zip 파일로 자동 다운로드됩니다.
 
 <img width="778" height="531" alt="스크린샷 2026-07-09 222039" src="https://github.com/user-attachments/assets/02864721-ff62-450a-bde6-44be165854d6" />
 
