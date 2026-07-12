@@ -61,7 +61,7 @@
 #### 5. 이미징 형식(포맷)을 선택한다.
   - RAW(dd): 디스크 원본을 가공없이 복사하는 형식(쉽게 말하면 날것 그대로)
   - SMART: 리눅스를 위한 포렌식 형식
-  - E01: 포렌식 소프트웨어 'EnCase'에서 사용하는 압축과 무결검증이 통합된 형식
+  - E01: 포렌식 소프트웨어 'EnCase'에서 사용하는 압축과 무결성 검증이 통합된 형식
   - AFF: 특정 기업 기술에 종속되지 않은 오픈소스 조립식 포맷
 
 <img width="365" height="309" alt="KakaoTalk_Snapshot_20260709_221102" src="https://github.com/user-attachments/assets/4e74092a-2455-4b54-8fa3-24b95ec3ddf6" />
@@ -74,6 +74,8 @@
   - 분할을 하는 이유: 디스크의 거대한 용량으로 인해 발생할 수 있는 보관 및 네트워크 전송 문제를 해결하기 위해 사용한다.
 
 <img width="366" height="310" alt="KakaoTalk_Snapshot_20260712_211542" src="https://github.com/user-attachments/assets/b5c07c16-1058-4581-9656-6256a7ee6cb5" />
+
+### 실제 컴퓨터 드라이브를 이미징하고 싶었으나 현실적인 용량의 문제로 USB드라이브로 대체하였습니다.
 
 > 실제 이미징 화면
 
