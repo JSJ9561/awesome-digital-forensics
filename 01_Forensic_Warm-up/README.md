@@ -75,6 +75,18 @@
 
 <img width="366" height="310" alt="KakaoTalk_Snapshot_20260712_211542" src="https://github.com/user-attachments/assets/b5c07c16-1058-4581-9656-6256a7ee6cb5" />
 
+> 실제 이미징 화면
+
+<img width="303" height="216" alt="KakaoTalk_Snapshot_20260712_220341" src="https://github.com/user-attachments/assets/4ceec224-fa7c-44b1-9651-1e2b34dcf26b" />
+
+> 이미징 완료 후 무결성 검증 확인 화면
+
+<img width="511" height="389" alt="KakaoTalk_Snapshot_20260712_220719" src="https://github.com/user-attachments/assets/99e9a40a-05cf-4071-8403-8e1c7c81fbeb" />
+
+<img width="553" height="307" alt="KakaoTalk_Snapshot_20260712_220902" src="https://github.com/user-attachments/assets/98a3a65a-b7fb-4fe9-b8cd-1d9220db230f" />
+
+<img width="551" height="307" alt="KakaoTalk_Snapshot_20260712_220929" src="https://github.com/user-attachments/assets/5c0de12b-498a-472e-a11a-e124e388fe5e" />
+
 
 
 
