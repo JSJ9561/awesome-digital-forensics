@@ -89,6 +89,8 @@
 
 <img width="551" height="307" alt="KakaoTalk_Snapshot_20260712_220929" src="https://github.com/user-attachments/assets/5c0de12b-498a-472e-a11a-e124e388fe5e" />
 
+## 디스크 이미지 마운트
+
 
 
 
