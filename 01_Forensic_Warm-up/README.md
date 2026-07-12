@@ -239,7 +239,10 @@
 
 <img width="844" height="552" alt="KakaoTalk_Snapshot_20260713_002351" src="https://github.com/user-attachments/assets/a9385b5c-3b17-4587-a46c-a75e34264162" />
 
-> 실습으로 사용한 USB같은 경우 드라이브 안에서 삭제하면 영구삭제가 되므로 완벽한 복구가 불가능하다. 이런 경우 다른 방법을 사용해야 한다. 과거 정보보안 공부를 할 때 HxD를 이용하여 헥사값 조작을 통해 복구하는 실습을 경험한 적이 있다. 해당 방법은 나중에 더 자세하게 설명할 예정이다.
+> 실습 노트:
+실습에 사용된 USB 드라이브의 경우, 파일 삭제 시 휴지통을 거치지 않고 파일 시스템(FAT32/NTFS) 상에서 메타데이터의 연결 고리가 즉시 끊어지는 영구 삭제 구조를 가집니다. 이로 인해 일반적인 내보내기(Export) 방식으로는 데이터 영역까지 온전히 복구되지 않아 파일 손상이 발생합니다.
+
+이러한 한계를 극복하기 위해, 과거 학습했던 **HxD 헥스 에디터(Hex Editor)**를 활용한 시그니처 분석 및 헥사값 수동 조작 기법이 대안이 될 수 있으며, 해당 세부 기법은 추후 실습을 통해 깊이 있게 다룰 예정입니다.
 
 ### Autopsy를 이용하여 복구하기
 
@@ -283,7 +286,7 @@
 
 <img width="941" height="690" alt="KakaoTalk_Snapshot_20260713_004307" src="https://github.com/user-attachments/assets/185b3cb8-b713-45b4-88a3-8441d8d98dc3" />
 
-Data Source Tree를 뒤져보면 Deleted File 항목이 존재한다. FTK Imager에서와 비슷하게 복구할 파일을 우클릭하고 Extract를 하면 파일이 복구된다.
+Data Source Tree 하위의 Deleted File 항목이 존재한다. FTK Imager에서와 비슷하게 복구할 파일을 우클릭하고 Extract를 하면 파일이 복구된다.
 
 > 실행 결과
 
