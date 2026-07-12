@@ -91,8 +91,84 @@
 
 ## 디스크 이미지 마운트
 
+> 이미징을 한 파일을 읽는 방법은 4가지가 있지만 자주 쓰는 2가지를 해볼 생각입니다.
 
+### 1. 이미지 디스크 마운트하기
+> 장점
 
+> 직접적인 탐색 가능: 이미징된 파일을 실제 물리적인 드라이브(예: `E:\`, `F:\` 등)로 OS에 인식시켜, 윈도우 파일 탐색기를 통해 일반 디스크처럼 직관적으로 내부 구조를 확인할 수 있습니다.
+
+> 타 분석 도구와의 연계성: OS가 드라이브로 인식하기 때문에, FTK Imager 외에 다른 포렌식 분석 도구나 백신 프로그램 등으로 해당 드라이브를 바로 스캔하고 분석하기에 용이합니다.
+
+### 마운트 순서와 증거로 불러오기
+
+#### 1. 상단의 동전 두개가 있는 모양을 클릭한다.
+
+<img width="278" height="33" alt="KakaoTalk_Snapshot_20260712_224016" src="https://github.com/user-attachments/assets/97b00010-1401-4555-855c-ad4c09004867" />
+
+#### 2. 디스크 이미지 파일을 찾아 불러오고 마운트한다.
+
+<img width="429" height="417" alt="KakaoTalk_Snapshot_20260712_224713" src="https://github.com/user-attachments/assets/2d239368-f283-4043-bacf-700d3a9647da" />
+
+> 마운트 후 화면
+
+<img width="431" height="416" alt="KakaoTalk_Snapshot_20260712_230343" src="https://github.com/user-attachments/assets/da94af18-8a30-4d00-ac90-4458e26ca013" />
+
+> 파일 탐색기에 드라이브가 인식되어 있다.
+<img width="143" height="144" alt="KakaoTalk_Snapshot_20260712_224836" src="https://github.com/user-attachments/assets/8f2a7ad3-d501-4713-a7ee-f4cee88534ea" />
+
+#### 3. 상단의 더하기가 있는 지구 모양을 클릭한다. 혹은 파일 -> Add Evidence Iitem 클릭
+
+<img width="278" height="33" alt="KakaoTalk_Snapshot_20260712_224016 - 복사본" src="https://github.com/user-attachments/assets/0eb2c47c-fb1d-43fc-8442-3c9094d6f25f" />
+
+#### 4. Physical Drive를 선택한다.
+
+<img width="395" height="327" alt="KakaoTalk_Snapshot_20260712_224801" src="https://github.com/user-attachments/assets/c957aaa6-643e-4a16-81f5-40151f178916" />
+
+#### 5. 마운트되어 있는 드라이브들 중 증거로 불러올 드라이브를 찾는다.
+
+<img width="394" height="326" alt="KakaoTalk_Snapshot_20260712_224821" src="https://github.com/user-attachments/assets/45fe7778-ba80-468e-9392-214ba3c10ffe" />
+
+> 시간이 좀 걸린다.
+
+> 결과
+
+<img width="469" height="225" alt="KakaoTalk_Snapshot_20260712_225032" src="https://github.com/user-attachments/assets/f9adb6b5-0bee-4d46-a5ef-9b8c7837e632" />
+
+### 2. 디스크 이미지 읽어오기
+> 장점
+
+> 비파괴적/안전한 분석: OS에 별도의 드라이브를 할당하거나 수정하지 않고, FTK Imager 프로그램 내부의 'Evidence Tree'에 독립적인 객체로 로드하여 안전하게 분석할 수 있습니다.
+
+> 포렌식 특화 기능 활용: 삭제된 파일 흔적 분석, 파일 시스템의 메타데이터(MFT 영역 등) 확인, 해시값 추출 등 포렌식 전용 기능을 프로그램 내에서 가장 빠르고 정확하게 수행할 수 있습니다.
+
+### 증거로 불러오기(디스크 이미지를 읽어오는 방법은 따로 마운트 과정이 필요하지 않다)
+
+#### 1. 상단의 더하기가 있는 지구 모양을 클릭한다. 혹은 파일 -> Add Evidence Iitem 클릭
+
+<img width="278" height="33" alt="KakaoTalk_Snapshot_20260712_224016 - 복사본" src="https://github.com/user-attachments/assets/c492ff71-2111-452b-9d3d-50fb01c1956a" />
+
+#### 2. Image File을 선택한다.
+
+<img width="398" height="327" alt="KakaoTalk_Snapshot_20260712_225242" src="https://github.com/user-attachments/assets/388c2e9d-5c72-4642-91d6-1431714600fa" />
+
+#### 3. 불러올 이미지 파일을 선택한다.
+
+<img width="398" height="325" alt="KakaoTalk_Snapshot_20260712_225303" src="https://github.com/user-attachments/assets/04af5f0f-8554-42ad-a538-14cc26f9cf6f" />
+
+> 결과
+
+<img width="336" height="139" alt="KakaoTalk_Snapshot_20260712_225346" src="https://github.com/user-attachments/assets/7fe837ed-9c3e-46d1-ac9c-d442be65257b" />
+
+> 위 결과에서 보면 알 수 있듯 불러오는 방식에 따라 증거파일 형식이 다르다.
+
+* \\.\PHYSICALDRIVE2 (Physical Drive)
+  - 의미: 윈도우 OS가 인식하는 하드웨어 장치 고유 경로 (Win32 네임스페이스)
+  - 특징: 파일 시스템을 거치지 않고 디스크 섹터에 직접 다이렉트(Raw) 접근 중임을 나타냄
+  
+* E_Flash_Drive.E01 (Image File)
+  - 의미: 분석가가 사전에 덤프(Dump)하여 생성해 둔 정적 파일의 이름과 확장자
+  - 특징: 하드웨어 장치 직결이 아닌, 기존에 만들어진 가상 복제본 파일을 단순 로드(Open)했음을 나타냄
 
 
 
