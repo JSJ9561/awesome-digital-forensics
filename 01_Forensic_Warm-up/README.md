@@ -102,6 +102,7 @@
 
 ### 마운트 순서와 증거로 불러오기
 
+### [Step 1] 디스크 이미지 마운트 진행
 #### 1. 상단의 동전 두개가 있는 모양을 클릭한다.
 
 <img width="278" height="33" alt="KakaoTalk_Snapshot_20260712_224016" src="https://github.com/user-attachments/assets/97b00010-1401-4555-855c-ad4c09004867" />
@@ -117,7 +118,8 @@
 > 파일 탐색기에 드라이브가 인식되어 있다.
 <img width="143" height="144" alt="KakaoTalk_Snapshot_20260712_224836" src="https://github.com/user-attachments/assets/8f2a7ad3-d501-4713-a7ee-f4cee88534ea" />
 
-#### 3. 상단의 더하기가 있는 지구 모양을 클릭한다. 혹은 파일 -> Add Evidence Iitem 클릭
+### [Step 2] FTK Imagerdp 증거(Evidence)로 불러오기
+#### 3. 상단의 더하기가 있는 지구 모양을 클릭한다. 혹은 파일 -> Add Evidence Item 클릭
 
 <img width="278" height="33" alt="KakaoTalk_Snapshot_20260712_224016 - 복사본" src="https://github.com/user-attachments/assets/0eb2c47c-fb1d-43fc-8442-3c9094d6f25f" />
 
@@ -129,7 +131,7 @@
 
 <img width="394" height="326" alt="KakaoTalk_Snapshot_20260712_224821" src="https://github.com/user-attachments/assets/45fe7778-ba80-468e-9392-214ba3c10ffe" />
 
-> 시간이 좀 걸린다.
+> **실습 노트:** 4GB 내외의 비교적 작은 용량임에도 로드 시 수 초에서 수 분간의 지연(Freeze) 현상이 발생할 수 있습니다. 이는 FTK Imager가 마운트된 드라이브의 파티션 구조와 파일 시스템 메타데이터(MFT 등)를 내부적으로 파싱(Parsing)하고 인덱싱하는 과정이 수반되기 때문입니다.
 
 > 결과
 
@@ -144,7 +146,7 @@
 
 ### 증거로 불러오기(디스크 이미지를 읽어오는 방법은 따로 마운트 과정이 필요하지 않다)
 
-#### 1. 상단의 더하기가 있는 지구 모양을 클릭한다. 혹은 파일 -> Add Evidence Iitem 클릭
+#### 1. 상단의 더하기가 있는 지구 모양을 클릭한다. 혹은 파일 -> Add Evidence Item 클릭
 
 <img width="278" height="33" alt="KakaoTalk_Snapshot_20260712_224016 - 복사본" src="https://github.com/user-attachments/assets/c492ff71-2111-452b-9d3d-50fb01c1956a" />
 
