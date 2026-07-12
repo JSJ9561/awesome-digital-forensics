@@ -118,7 +118,7 @@
 > 파일 탐색기에 드라이브가 인식되어 있다.
 <img width="143" height="144" alt="KakaoTalk_Snapshot_20260712_224836" src="https://github.com/user-attachments/assets/8f2a7ad3-d501-4713-a7ee-f4cee88534ea" />
 
-### [Step 2] FTK Imagerdp 증거(Evidence)로 불러오기
+### [Step 2] FTK Imager에 증거(Evidence)로 불러오기
 #### 3. 상단의 더하기가 있는 지구 모양을 클릭한다. 혹은 파일 -> Add Evidence Item 클릭
 
 <img width="278" height="33" alt="KakaoTalk_Snapshot_20260712_224016 - 복사본" src="https://github.com/user-attachments/assets/0eb2c47c-fb1d-43fc-8442-3c9094d6f25f" />
@@ -162,15 +162,14 @@
 
 <img width="336" height="139" alt="KakaoTalk_Snapshot_20260712_225346" src="https://github.com/user-attachments/assets/7fe837ed-9c3e-46d1-ac9c-d442be65257b" />
 
-> 위 결과에서 보면 알 수 있듯 불러오는 방식에 따라 증거파일 형식이 다르다.
+### 💡 실습 결과 분석: 불러오기 방식에 따른 차이점
 
-* \\.\PHYSICALDRIVE2 (Physical Drive)
-  - 의미: 윈도우 OS가 인식하는 하드웨어 장치 고유 경로 (Win32 네임스페이스)
-  - 특징: 파일 시스템을 거치지 않고 디스크 섹터에 직접 다이렉트(Raw) 접근 중임을 나타냄
-  
-* E_Flash_Drive.E01 (Image File)
-  - 의미: 분석가가 사전에 덤프(Dump)하여 생성해 둔 정적 파일의 이름과 확장자
-  - 특징: 하드웨어 장치 직결이 아닌, 기존에 만들어진 가상 복제본 파일을 단순 로드(Open)했음을 나타냄
+두 방식은 FTK Imager 내부의 `Evidence Tree`에 표시되는 경로와 형태가 다릅니다. 이 차이는 포렌식 데이터 접근 방식의 이해에 매우 중요합니다.
+
+| 표시 형태 | 분석 및 의미 | 주요 특징 |
+| :--- | :--- | :--- |
+| **`\\.\PHYSICALDRIVE2`**<br>(Physical Drive 방식) | 윈도우 OS가 인식하는 하드웨어 장치 고유 경로 (Win32 네임스페이스)를 의미합니다. | 파일 시스템을 거치지 않고, 디스크 섹터에 직접 다이렉트(Raw)로 접근 중임을 나타냅니다. |
+| **`E_Flash_Drive.E01`**<br>(Image File 방식) | 분석가가 사전에 덤프(Dump)하여 생성해 둔 정적 파일의 이름과 확장자입니다. | 하드웨어 장치 직결이 아닌, 기존에 만들어진 가상 복제본 파일을 단순 로드(Open)했음을 나타냅니다. |
 
 
 
