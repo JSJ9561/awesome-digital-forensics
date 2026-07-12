@@ -209,3 +209,86 @@
 2. **공인된 샘플 활용**: 덤프 파일 생성 연습 대신, [CyberDefenders DumpMe 챌린지](https://cyberdefenders.org/blueteam-ctf-challenges/dumpme/)에서 제공하는 공개 메모리 덤프 샘플(.raw)을 다운로드하여 분석 실습을 대체 진행하였습니다. 
    * *참고:* 해당 샘플은 악성코드 감염 흔적을 포함하고 있어, 향후 침해사고 분석 및 메모리 포렌식 학습에 더욱 유용합니다.
   
+## 삭제 파일 복구
+
+### FTK Imager를 이용하여 복구하기
+
+### 이미지 파일을 읽어와서 진행
+
+<img width="725" height="182" alt="KakaoTalk_Snapshot_20260713_001223" src="https://github.com/user-attachments/assets/02f6e170-3e7d-44e1-8406-797486023d88" />
+
+> 예시 사진
+
+<img width="976" height="546" alt="deletedfile_ftkrecover" src="https://github.com/user-attachments/assets/1578c0c0-2c8f-46b2-9c53-bad88b6fdeb1" />
+
+- 출처: [https://mattcasmith.net/2021/04/02/file-carving-recovering-deleted-file-disk-image]
+
+이미지 파일을 불러오면 evidence tree(초록색 상자)가 보인다. evidence tree를 열어보면 'root' 파일이 존재한다. 'root'파일을 살펴보면 'x'표시된 아이콘(빨간색 상자)이 존재하는데 이 파일들이 삭제된 파일들이다. 만약 시스템 드라이브 즉, 컴퓨터 하드디스크나 ssd를 열어보면 예시 사진과 같이 'RECYCLE.BIN' 혹은 '$' 표시된 파일이 존재하는데 그 곳에 삭제된 파일들이 존재한다. 
+
+### 복구 방법
+
+#### 1. 복구할 파일을 선택하고 우클릭 후 Export File 클릭
+
+<img width="684" height="198" alt="스크린샷 2026-07-13 002111" src="https://github.com/user-attachments/assets/a2d51959-690b-4e5e-9d35-627ba9b62a89" />
+
+#### 2. 저장 경로 선택
+
+<img width="276" height="307" alt="KakaoTalk_Snapshot_20260713_002243" src="https://github.com/user-attachments/assets/d139099e-3ef5-4d55-941b-d74d82df05a6" />
+
+#### 결과 확인
+
+<img width="844" height="552" alt="KakaoTalk_Snapshot_20260713_002351" src="https://github.com/user-attachments/assets/a9385b5c-3b17-4587-a46c-a75e34264162" />
+
+> 실습으로 사용한 USB같은 경우 드라이브 안에서 삭제하면 영구삭제가 되므로 완벽한 복구가 불가능하다. 이런 경우 다른 방법을 사용해야 한다. 과거 정보보안 공부를 할 때 HxD를 이용하여 헥사값 조작을 통해 복구하는 실습을 경험한 적이 있다. 해당 방법은 나중에 더 자세하게 설명할 예정이다.
+
+### Autopsy를 이용하여 복구하기
+
+### 분석파일 불러오기
+
+#### 1. Autopsy 실행 후 New Case 클릭
+
+<img width="391" height="271" alt="KakaoTalk_Snapshot_20260713_003407" src="https://github.com/user-attachments/assets/f6a15aa6-5c90-40a2-bb0c-15cd29d0b8c9" />
+
+#### 2. 케이스 이름과 테이블을 생성할 디렉터리 설정
+
+<img width="605" height="368" alt="KakaoTalk_Snapshot_20260713_003545" src="https://github.com/user-attachments/assets/85f1d088-0c6d-44ec-8933-c07fefd57e41" />
+
+#### 3. 사건의 세부정보를 입력한다.
+
+<img width="601" height="367" alt="KakaoTalk_Snapshot_20260713_003604" src="https://github.com/user-attachments/assets/6f766571-19f5-437d-b488-0b3d4199fbba" />
+
+#### 4. Default 선택을 한다.
+
+<img width="660" height="419" alt="KakaoTalk_Snapshot_20260713_003638" src="https://github.com/user-attachments/assets/611a0bf3-b7bc-4005-a7b1-cc5b074da014" />
+
+#### 5. 불러올 사건 파일의 형식을 선택한다. 이전에 생성한 usb 이미지 파일을 이용할 것이니 Disk Image 선택
+
+<img width="657" height="419" alt="KakaoTalk_Snapshot_20260713_003656" src="https://github.com/user-attachments/assets/f8341361-d723-4a35-a948-b1b3d93ad0b8" />
+
+#### 6. 불러올 파일을 선택하고 시간을 설정한다. 한국에서 실행할 것이므로 Seoul 선택
+
+<img width="656" height="420" alt="KakaoTalk_Snapshot_20260713_003759" src="https://github.com/user-attachments/assets/b304d8e7-6bf8-4ec1-999d-eed912f1e800" />
+
+#### 7. 분석에 이용할 도구 선택하기
+
+<img width="652" height="411" alt="KakaoTalk_Snapshot_20260713_003846" src="https://github.com/user-attachments/assets/968baffd-f25f-43e5-81a0-f20dbde01d09" />
+
+#### 8. 결과 확인
+
+<img width="656" height="416" alt="KakaoTalk_Snapshot_20260713_004036" src="https://github.com/user-attachments/assets/8ce6bc37-459e-480e-b9e5-cacb0effbcf9" />
+
+<img width="943" height="685" alt="KakaoTalk_Snapshot_20260713_004057" src="https://github.com/user-attachments/assets/28c941cf-01d7-4aba-bec6-f9fbb9e67e77" />
+
+### 파일 복구하기
+
+<img width="941" height="690" alt="KakaoTalk_Snapshot_20260713_004307" src="https://github.com/user-attachments/assets/185b3cb8-b713-45b4-88a3-8441d8d98dc3" />
+
+Data Source Tree를 뒤져보면 Deleted File 항목이 존재한다. FTK Imager에서와 비슷하게 복구할 파일을 우클릭하고 Extract를 하면 파일이 복구된다.
+
+> 실행 결과
+
+<img width="915" height="648" alt="KakaoTalk_Snapshot_20260713_004358" src="https://github.com/user-attachments/assets/ec3bc9e7-665b-400d-a8af-92e1a064b0b2" />
+
+FTK Imager에서와 마찬가지로 손상된 파일로 나온다.
+
+
