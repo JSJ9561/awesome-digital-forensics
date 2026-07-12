@@ -29,12 +29,44 @@
 
 ## 디스크 이미징과 마운트, 메모리 덤프
 
+### 디스크 이미징하는 순서
 
+#### 1. 상단의 표시된 모양을 클릭한다.
 
+<img width="272" height="52" alt="KakaoTalk_Snapshot_20260709_220908" src="https://github.com/user-attachments/assets/696bc427-4665-4ef4-b0dc-6f0ed7e80bce" />
 
+#### 2. 이미징할 매체를 선택한다.
+  - Physical Drive: 실제 하드디스크나 USB에 담겨 있는 전체데이터를 가져오고 싶을 때 선택
+  - Logical Drive: OS가 인식하고 있는 특정 드라이브에 담겨 있는 데이터를 가져오고 싶을 때 선택(예: C, D드라이브)
+  - Image File: 사전에 이미징 해놓은 디지털파일들을 불러올때 사용
+  - Contents of a Folder: 특정 폴더에 담겨 있는 데이터를 가져오고 싶을 때 선택
+  - IOS Advanved Logical Collection/Fernico Device: IOS/CD/DVD와 같은 컴퓨터 장비 이외에 있는 데이터를 가져오고 싶을 때 선택
 
+<img width="394" height="326" alt="KakaoTalk_Snapshot_20260712_211407" src="https://github.com/user-attachments/assets/2d91e477-ef2b-4f4d-ab97-dec827f4d21c" />
 
+#### 3. 추출할 드라이브/메모리를 선택한다.(필자의 컴퓨터 시리얼넘버가 있어서 가렸습니다.)
 
+<img width="397" height="324" alt="KakaoTalk_Snapshot_20260709_220935" src="https://github.com/user-attachments/assets/f28a9f33-b90b-43fa-99bd-c47a1f79c02a" />
 
+#### 4. Add를 클릭하여 추가 설정을 한다.
+
+<img width="326" height="320" alt="KakaoTalk_Snapshot_20260709_221031" src="https://github.com/user-attachments/assets/a1a48903-f36c-4c9a-ac12-d4cfee980413" />
+
+#### 5. 이미징 형식을 선택한다.
+  - RAW(dd): 디스크 원본을 가공없이 복사하는 형식(쉽게 말하면 날것 그대로)
+  - SMART: 리눅스를 위한 포렌식 형식
+  - E01: 포렌식 소프트웨어 'EnCase'에서 사용하는 압축과 무결검증이 통합된 형식
+  - AFF: 특정 기업 기술에 종속되지 않은 오픈소스 조립식 포멧
+
+<img width="365" height="309" alt="KakaoTalk_Snapshot_20260709_221102" src="https://github.com/user-attachments/assets/4e74092a-2455-4b54-8fa3-24b95ec3ddf6" />
+
+#### 6. 증거의 기본 정보를 입력한다(사건번호, 증거번호, 분석가이름 등등). 법적 정당성을 위한 절차이다.
+
+<img width="364" height="308" alt="KakaoTalk_Snapshot_20260712_211449" src="https://github.com/user-attachments/assets/a3dd0cc1-96c1-423f-aac2-a8c180ecf434" />
+
+#### 7. 이미지 저장 경로를 지정하고 파일 이름을 작성한다. 분할할 개수도 함께 설정한다.(첫 연습이라 분할하지 않고 이미징하였습니다.)
+  - 분할을 하는 이유: 디스크의 용량 문제로 인한 보관 및 전송 문제를 해결하기 위해 사용한다.
+
+<img width="366" height="310" alt="KakaoTalk_Snapshot_20260712_211542" src="https://github.com/user-attachments/assets/b5c07c16-1058-4581-9656-6256a7ee6cb5" />
 
 
