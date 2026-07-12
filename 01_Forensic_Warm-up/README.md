@@ -31,7 +31,7 @@
 - 네트워크 포렌식: 네트워크 패킷, 네트워크 장비 로그, 네트워크 관련 설정 분석
 - 모바일 포렌식: 모바일 디바이스(저장소, 메모리), IOT 디바이스 데이터 분석
 
-## 디스크 이미징과 마운트, 메모리 덤프
+## 디스크 이미징
 
 > ⚠️ 중요 (포렌식 주의사항): 원본 매체를 PC에 연결하여 디스크 이미징을 수행하기 전, 원본 데이터가 위·변조되는 것을 방지하기 위해 반드시 하드웨어적 또는 소프트웨어적 '쓰기 방지(Write-Protection)' 조치를 취해야 합니다. (무결성의 원칙 준수)
 
@@ -137,6 +137,10 @@
 
 <img width="469" height="225" alt="KakaoTalk_Snapshot_20260712_225032" src="https://github.com/user-attachments/assets/f9adb6b5-0bee-4d46-a5ef-9b8c7837e632" />
 
+> 마운트된 이미지 디스크를 제거 하고 싶으면 상단의 동전모양을 누르고 나오는 창에 다시 들어가서 Unmount할 드라이브를 선택하고 Unmount를 클릭하면 된다.
+
+<img width="429" height="417" alt="KakaoTalk_Snapshot_20260712_224713 - 복사본" src="https://github.com/user-attachments/assets/bae1d149-b231-4c3f-a222-048d2fa5dff6" />
+
 ### 2. 디스크 이미지 읽어오기
 > 장점
 
@@ -171,4 +175,31 @@
 | **`\\.\PHYSICALDRIVE2`**<br>(Physical Drive 방식) | 윈도우 OS가 인식하는 하드웨어 장치 고유 경로 (Win32 네임스페이스)를 의미합니다. | 파일 시스템을 거치지 않고, 디스크 섹터에 직접 다이렉트(Raw)로 접근 중임을 나타냅니다. |
 | **`E_Flash_Drive.E01`**<br>(Image File 방식) | 분석가가 사전에 덤프(Dump)하여 생성해 둔 정적 파일의 이름과 확장자입니다. | 하드웨어 장치 직결이 아닌, 기존에 만들어진 가상 복제본 파일을 단순 로드(Open)했음을 나타냅니다. |
 
+## 메모리 덤프
 
+> ⚠️ 실습 과정 중 덤프가 제대로 되지 않는 문제가 있었습니다. 이에 대해 찾아본 내용도 함께 올립니다.
+
+#### 1. 상단에 램 모양의 문양을 클릭한다.
+
+<img width="278" height="33" alt="KakaoTalk_Snapshot_20260712_224016 - 복사본 (3)" src="https://github.com/user-attachments/assets/2113a787-a8a9-4dd9-9cb7-c1ce6900c596" />
+
+#### 2. 덤프한 메모리를 저장할 경로를 설정한다.
+
+<img width="257" height="212" alt="KakaoTalk_Snapshot_20260712_225115" src="https://github.com/user-attachments/assets/a736d784-defe-441a-a499-f7d10c102ac7" />
+
+#### 3. Capture Memory를 누르면...?
+
+<img width="324" height="161" alt="KakaoTalk_Snapshot_20260712_225127" src="https://github.com/user-attachments/assets/70448382-ab9f-4307-8452-e5007e47bbe0" />
+
+> 이렇게 오류가 나온다.
+
+> 이 오류가 발생하는 데에는 3가지 이유가 있다고 한다.
+  1. 관리자 모드로 실행하지 않아서(-> 관리자 모드로 다시 실행해 보았지만 똑같은 오류가 발생했다.)
+  2. 저장 용량 부족(-> 300Gb 정도의 여유 용량이 있는 D드라이브에 저장을 시도했었다. 따라서 용량 문제는 아니다.)
+  3. Windows 보안 프로그램 차단(-> 초기 설치할 때 Windows 보안프로그램 예외실행을 설정했었다. 따라서 이 문제도 아니다.)
+
+> 결국 원인을 찾지 못했다. 
+
+> 이에 대한 해결 방법으로 다른 도구를 이용하여 메모리 덤프를 하면 된다고 한다.(WinPmem, DumpIt)
+
+> 또 다른 방법으로 덤프 파일을 다운로드하여 연습하는 것이다. [https://cyberdefenders.org/blueteam-ctf-challenges/dumpme/] 이 사이트에 회원가입(구글계정)하고 zip파일을 다운로드 받아 연습할 수 있다. 악성코드 메모리 덤프도 포함하고 있어서 보안 연습을 할 때에도 유용하다.(본인도 이 사이트에서 다운받았습니다.)
