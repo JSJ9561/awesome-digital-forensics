@@ -223,7 +223,7 @@
 
 - 출처: [https://mattcasmith.net/2021/04/02/file-carving-recovering-deleted-file-disk-image]
 
-이미지 파일을 불러오면 evidence tree(초록색 상자)가 보인다. evidence tree를 열어보면 'root' 파일이 존재한다. 'root'파일을 살펴보면 'x'표시된 아이콘(빨간색 상자)이 존재하는데 이 파일들이 삭제된 파일들이다. 만약 시스템 드라이브 즉, 컴퓨터 하드디스크나 ssd를 열어보면 예시 사진과 같이 'RECYCLE.BIN' 혹은 '$' 표시된 파일이 존재하는데 그 곳에 삭제된 파일들이 존재한다. 
+> 이미지 파일을 불러오면 evidence tree(초록색 상자)가 보인다. evidence tree를 열어보면 'root' 파일이 존재한다. 'root'파일을 살펴보면 'x'표시된 아이콘(빨간색 상자)이 존재하는데 이 파일들이 삭제된 파일들이다. 만약 시스템 드라이브 즉, 컴퓨터 하드디스크나 ssd를 열어보면 예시 사진과 같이 'RECYCLE.BIN' 혹은 '$' 표시된 파일이 존재하는데 그 곳에 삭제된 파일들이 존재한다. 
 
 ### 복구 방법
 
@@ -292,7 +292,7 @@ Data Source Tree 하위의 Deleted File 항목이 존재한다. FTK Imager에서
 
 <img width="915" height="648" alt="KakaoTalk_Snapshot_20260713_004358" src="https://github.com/user-attachments/assets/ec3bc9e7-665b-400d-a8af-92e1a064b0b2" />
 
-FTK Imager에서와 마찬가지로 손상된 파일로 나온다.
+> FTK Imager에서와 마찬가지로 손상된 파일로 나온다.
 
 ### 💡 실습 결과 분석 및 향후 계획
 
