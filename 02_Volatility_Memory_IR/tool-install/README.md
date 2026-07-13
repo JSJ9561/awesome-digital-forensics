@@ -15,7 +15,7 @@
 > 참고: Windows 11은 기본적으로 터미널이 포함되어 있으므로 이 과정을 건너뛰어도 됩니다.
 
 ### 시스템 환경 변수 설정
-> 이유: 터미널 어디에서나 `volatility` 명령어를 어느 경로에서든 즉시 호출하여 사용할 수 있도록 실행 파일의 절대 경로를 시스템에 등록하기 위함입니다.
+> 이유: 터미널 어디에서나 `volatility` 명령어를 즉시 호출하여 사용할 수 있도록 실행 파일의 절대 경로를 시스템에 등록하기 위함입니다.
 
 #### 1.  윈도우 시작 메뉴에서 '시스템 환경 변수 편집'을 검색하여 실행합니다.
 
@@ -38,7 +38,7 @@
 <img width="377" height="415" alt="KakaoTalk_Snapshot_20260713_224726" src="https://github.com/user-attachments/assets/11680a06-f4d8-4dcf-8100-28cc1ddff6bc" />
 
 ### Windows Terminal 실행 후 Path 설정 확인
-> 터미널 창에 'volat' + tab키를 하여 자동완성이 정상적으로 작동하는지 확인합니다.
+> 터미널 창에 'volat' + tab키를 하여 자동완성이 정상적으로 작동하면 정상적으로 설정이 완료된 것입니다.
 
 <img width="644" height="404" alt="KakaoTalk_Snapshot_20260713_225507" src="https://github.com/user-attachments/assets/f5c8fbf3-fccf-45b0-9394-f43d397e4303" />
 
