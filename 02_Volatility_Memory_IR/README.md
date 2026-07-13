@@ -11,5 +11,7 @@
 | **Malware-Cridex** | [GitHub](https://github.com/volatilityfoundation/volatility/wiki) | 접근 불가 | 강의 첨부파일 활용 |
 | **GrrCON** | [ctf-d.com](http://ctf-d.com) | 접근 불가 | 강의 배포파일 활용 |
 
+> ※ 본 실습 파일은 저작권 문제로 인해 직접 게시하지 않으니, 각 공식 경로 혹은 수강 중인 학습 플랫폼을 통해 확보하시기 바랍니다.
+
 ## Volatility Cridex 풀이
 
