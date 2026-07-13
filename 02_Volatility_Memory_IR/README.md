@@ -11,6 +11,11 @@
 ## GrrCON
 > [ctf-d.com] 공식사이트에서 'Target1-1dd8701f.zip'을 다운로드 받아야 하지만 마찬가지로 현재 공식사이트에 접근이 불가능하다. 이 파일도 수강하고 있는 강의에서 배포된 파일을 다운 받았다. 마찬가지로 공식 깃허브에서 찾아보았지만 발견하지 못했다.
 
+| 항목 | 공식 경로 | 상태 | 확보 방법 |
+| :--- | :--- | :--- | :--- |
+| **Malware-Cridex** | [GitHub](https://github.com/volatilityfoundation/volatility/wiki) | 접근 불가 | 강의 첨부파일 활용 |
+| **GrrCON** | [ctf-d.com](http://ctf-d.com) | 접근 불가 | 강의 배포파일 활용 |
+
 여기에 실습파일 개인적으로 올려도됨?
 
 # Volatility Cridex 풀이
