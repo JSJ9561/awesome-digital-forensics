@@ -33,7 +33,7 @@
 
 <img width="982" height="420" alt="KakaoTalk_Snapshot_20260714_184057" src="https://github.com/user-attachments/assets/3a292bfb-f7b5-465c-ae3f-6c79573000f9" />
 
-> 명령어를 실행하고 결과출력이 너무 많으면 가독성이 떨어집니다. '.log' 형식으로 리다이렉션하여 새로 만들고 'Notepad++'로 열어줍니.
+> 명령어를 실행하고 결과출력이 너무 많으면 가독성이 떨어집니다. '.log' 형식으로 리다이렉션하여 새로 만들고 'Notepad++'로 열어줍니다.
 
 \> volatility_2.6_win64_standalone.exe -f [메모리 파일 경로] --profile=[profile] pslist > pslist.log
 
