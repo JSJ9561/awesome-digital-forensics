@@ -103,7 +103,7 @@
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] connections > connections.log
 
-### 12. netscan: 메모리 상의 네트워크 연결 정보 스캔 명령어
+### 12. netscan: 메모리 상의 네트워크 연결 정보 스캔 명령어 
 > connections 명령어보다 더 정교하게, 현재 및 과거의 TCP/UDP 네트워크 연결 상태를 스캔합니다. 특히 종료된 연결이나 리스닝(Listening) 중인 소켓까지 포괄적으로 찾아내므로, 악성코드의 통신 흔적을 분석할 때 반드시 병행해야 합니다.
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] netscan > netscan.log
