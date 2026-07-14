@@ -86,8 +86,6 @@
 
 \> volatility_2.6_win64_standalone.exe -f [메모리 파일 경로] --profile=[profile] dumpfiles -Q [offset] -D [저장할 디렉터리] -n
 
-> cridex 디렉터리 안에 files 디렉터리를 생성하고 추출했습니다.
-
 ### 11. connections: 연결된 TCP/IP 네트워크 정보 추출 명령어
 > 프로세스가 네트워크를 통해 외부와 통신한 이력을 확인합니다. 악성코드가 C&C 서버와 통신하거나 데이터를 외부로 유출할 때 사용한 연결 정보를 추적할 수 있습니다.
 
@@ -110,8 +108,6 @@
   - -p [PID]: 추출할 프로세스의 PID 지정
 
 \> volatility_2.6_win64_standalone.exe -f [메모리 파일 경로] --profile=[profile] memdump -p [PID] -D [저장할 디렉터리]
-
-> cridex 디렉터리 안에 dumps 디렉터리를 생성하고 저장했습니다.
 
 ### 15. procdump: 프로세스 실행 파일 추출 명령어
 > 특정 프로세스의 실행 파일(exe)을 추출합니다. 이 도구는 실제 실행 파일 형태를 확보하기 때문에, 악성코드의 기능을 분석(정적 분석)하는 데 핵심적인 명령어입니다.
