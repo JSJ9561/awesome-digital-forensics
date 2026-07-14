@@ -25,14 +25,14 @@
 
 ### 옵션: -f
 
-### 1. imageinfo: 분석할 메모리 이미지의 프로파일(OS 정보) 확인하는 명령어
+### 1. imageinfo: 분석할 메모리 이미지의 프로파일(OS 정보) 확인 명령어
 > 메모리 덤프 파일의 정보를 분석하여 적절한 프로파일을 식별합니다. 분석의 첫 단계로 반드시 수행해야 합니다.
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem imageinfo
 
 <img width="844" height="461" alt="KakaoTalk_Snapshot_20260714_183506" src="https://github.com/user-attachments/assets/df2253cb-a9e4-4bb9-a0db-7a6265eb0284" />
 
-### 2. pslist: EPROCESS 구조체를 기반으로 프로세스 리스트 출력하는 명령어
+### 2. pslist: EPROCESS 구조체를 기반으로 프로세스 리스트 출력 명령어
 > 액티브(Active) 프로세스 리스트를 따라가며 생성된 순서대로 프로세스들을 보여줍니다. 기본적으로 가장 먼저 확인하는 명령어입니다.
 
 > imageinfo에서 찾은 profile(s)에서 하나를 골라 복사하고 --profile=[복사한 profile] 옵션을 추가합니다.
@@ -51,12 +51,12 @@
 
 <img width="728" height="500" alt="KakaoTalk_Snapshot_20260714_184653" src="https://github.com/user-attachments/assets/e4202b73-700a-4670-8c9c-1d7d8441946f" />
 
-### 3. psscan: 숨은 프로세스들을 볼 수 있는 명령어
+### 3. psscan: 숨은 프로세스 확인 명령어
 > 메모리 구조를 직접 스캔하여 프로세스 객체(EPROCESS)를 찾습니다. 악성코드가 시스템 리스트에서 자신을 제거(Unlinking)하여 숨더라도, 메모리에 남아 있는 신분증 패턴을 직접 찾아내기 때문에 탐지가 가능합니다.
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] psscan > psscan.log
 
-### 4. pstree: 프로세스 계층 구조 확인하는 명령어
+### 4. pstree: 프로세스 계층 구조 확인 명령어
 > 부모-자식 관계(PPID)를 통해 악성코드의 감염 경로를 추적할 때 유용합니다.
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] pstree > pstree.log
@@ -66,47 +66,58 @@
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] psxview > psxview.log
 
-### 6. cmdscan: 터미널을 스캔하는 명령어
+### 6. cmdscan: 터미널을 명령어 기록 탐색 명령어
+> 메모리 내의 _COMMAND_HISTORY구조체를 스캔하여, 사용자가 'cmd.exe' 터미널에서 입력했던 명령어 기록을 복구합니다. 악성코드가 실행한 쉘 명령어나 파워쉘 스크립트를 찾아낼 때 매우 유용합니다.
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] cmdscan > cmdscan.log
 
-### 7. consoles: 
+### 7. consoles: 윈도우 콘솔 히스토리 복구 명령어
+> 'cmdscan'보다 더 상세하게 콘솔 창에 출력되었던 텍스트와 명령어 히스토리를 가져옵니다. 악성코드의 동작으로 인해 터미널에 어떤 로그가 남았는지 확인할 때 사용합니다.
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] consoles > consoles.log
 
-### 8. cmdline: 터미널에서 실행된 명령어들을 출력하는 명령어
+### 8. cmdline: 프로세스 실행 인자(Argument) 확인 명령어
+> 프로세스가 실행될 때 함께 입력된 인자값들을 확인합니다. 예를 들어, 'powershell.exe'가 실행될 때 뒤에 붙은 '-EncodedCommand' 같은 악성 스크립트 본문을 발견할 수 있습니다.
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] cmdline > cmdline.log
 
-### 9. filescan: 존재하는 모든 파일을 출력하는 명령어
+### 9. filescan: 메모리 상의 파일 객체 스캔 명령어
+> 시스템 메모리에 존재하는 모든 파일 객체를 스캔합니다. 악성코드가 생성한 파일의 이름과 메모리 상의 위치(Offset)를 파악할 때 사용합니다.
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] filescan > filescan.log
 
-### 10. dumpfiles: 파일을 추출하는 명령어
-> 옵션: -Q, -D, -n
-  - Q: filescan에서 얻은 출력내용 중에서 추출하고자 하는 파일의 offset 값을 복사하여 -Q [offset] 옵션을 추가해줍니다.
-  - D: 저장할 디렉터리를 지정하는 옵션 -D [저장할 디렉터리]
+### 10. dumpfiles: 파일 추출(증거 확보) 명령어
+> 'filescan'으로 찾은 오프셋(offset) 주소를 기반으로 실제 파일을 추출합니다.
+
+- 옵션: -Q, -D, -n
+  - -Q [offset]: 특정 주소의 파일을 지정
+  - -D [디렉터리]: 파일을 저장할 경로 지정
+  - -n: 원래 파일 이름을 유지하여 저장하는 옵션
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] dumpfiles -Q [offset] -D [저장할 디렉터리] -n
 
 > cridex 디렉터리 안에 files 디렉터리를 생성하고 추출했습니다.
 
-### 11. connections: 연결된 TCP/IP를 출력하는 명령어
+### 11. connections: 연결된 TCP/IP 네트워크 정보 추출 명령어
+> 프로세스가 네트워크를 통해 외부와 통신한 이력을 확인합니다. 악성코드가 C&C 서버와 통신하거나 데이터를 외부로 유출할 때 사용한 연결 정보를 추적할 수 있습니다.
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] connections > connections.log
 
-### 12. memdump: 프로세스 메모리를 저장하는 명령어
-> 옵션: -p
-  - p: PID를 지정하는 옵션 -p [PID]
+### 12. memdump: 프로세스 메모리 전체 덤프 명령어
+- 옵션: -p, -D
+  - -p [PID]: 추출할 프로세스의 PID 지정
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] memdump -p [PID] -D [저장할 디렉터리]
 
 > cridex 디렉터리 안에 dumps 디렉터리를 생성하고 저장했습니다.
 
-### 13. procdump: 프로세스를 추출하는 명령어
+### 13. procdump: 프로세스 실행 파일 추출 명령어
+> 특정 프로세스의 실행 파일(exe)을 추출합니다. 이 도구는 실제 실행 파일 형태를 확보하기 때문에, 악성코드의 기능을 분석(정적 분석)하는 데 핵심적인 명령어입니다.
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] procdump -p [PID] -D .\dumps\
 
-> 해당 명령어는 실제 실행파일을 저장하므로 사용에 유의해야 합니다. 악성코드 분석이나 침해사고 분석 등 바이러스와 관련된 작업을 할 경우 반드시 가상머신을 이용하여 테스트 해야 합니다.
+> [!WARNING] 분석 시 주의사항: 추출된 파일은 실제 동작하는 악성코드일 가능성이 매우 높습니다.
+  - 1. 반드시 네트워크가 차단된 격리된 가상머신 환경에서만 분석하십시오.
+  - 2. 원본 데이터의 무결성을 위해 원본 파일은 읽기 전용으로 보관하고, 분석은 복사본을 활용하십시오.
 
 ## Volatility Cridex 풀이
