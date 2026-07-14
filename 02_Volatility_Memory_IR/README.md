@@ -103,7 +103,17 @@
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] connections > connections.log
 
-### 12. memdump: 프로세스 메모리 전체 덤프 명령어
+### 12. netscan: 메모리 상의 네트워크 연결 정보 스캔 명령어
+> connections 명령어보다 더 정교하게, 현재 및 과거의 TCP/UDP 네트워크 연결 상태를 스캔합니다. 특히 종료된 연결이나 리스닝(Listening) 중인 소켓까지 포괄적으로 찾아내므로, 악성코드의 통신 흔적을 분석할 때 반드시 병행해야 합니다.
+
+\> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] netscan > netscan.log
+
+### 13. sockets: 활성화된 네트워크 소켓 탐지 명령어
+> 시스템에서 열려 있는 모든 네트워크 소켓(Socket) 정보를 나열합니다. 악성코드가 특정 포트를 열어 백도어로 활용하거나 외부와 통신하기 위해 생성한 소켓을 확인할 때 유용합니다.
+
+\> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] sockets > sockets.log
+
+### 14. memdump: 프로세스 메모리 전체 덤프 명령어
 - 옵션: -p, -D
   - -p [PID]: 추출할 프로세스의 PID 지정
 
@@ -111,7 +121,7 @@
 
 > cridex 디렉터리 안에 dumps 디렉터리를 생성하고 저장했습니다.
 
-### 13. procdump: 프로세스 실행 파일 추출 명령어
+### 15. procdump: 프로세스 실행 파일 추출 명령어
 > 특정 프로세스의 실행 파일(exe)을 추출합니다. 이 도구는 실제 실행 파일 형태를 확보하기 때문에, 악성코드의 기능을 분석(정적 분석)하는 데 핵심적인 명령어입니다.
 
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] procdump -p [PID] -D .\dumps\
