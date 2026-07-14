@@ -114,6 +114,8 @@
 \> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] sockets > sockets.log
 
 ### 14. memdump: 프로세스 메모리 전체 덤프 명령어
+> 특정 프로세스가 사용 중인 전체 메모리 영역을 파일로 저장합니다. 프로세스가 메모리 상에서 어떻게 동작하는지, 어떤 데이터를 처리 중인지 상세히 분석할 때 사용합니다.
+
 - 옵션: -p, -D
   - -p [PID]: 추출할 프로세스의 PID 지정
 
