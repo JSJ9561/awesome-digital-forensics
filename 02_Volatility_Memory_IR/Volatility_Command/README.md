@@ -81,7 +81,7 @@
 
 - 옵션: -Q, -D, -n
   - -Q [offset]: 특정 주소의 파일을 지정
-  - -D [디렉터리]: 파일을 저장할 경로 지정
+  - -D [저장할 디렉터리]: 파일을 저장할 경로 지정
   - -n: 원래 파일 이름을 유지하여 저장하는 옵션
 
 \> volatility_2.6_win64_standalone.exe -f [메모리 파일 경로] --profile=[profile] dumpfiles -Q [offset] -D [저장할 디렉터리] -n
@@ -116,4 +116,4 @@
 ### 15. procdump: 프로세스 실행 파일 추출 명령어
 > 특정 프로세스의 실행 파일(exe)을 추출합니다. 이 도구는 실제 실행 파일 형태를 확보하기 때문에, 악성코드의 기능을 분석(정적 분석)하는 데 핵심적인 명령어입니다.
 
-\> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] procdump -p [PID] -D .\dumps\
+\> volatility_2.6_win64_standalone.exe -f .\cridex.vmem --profile=[profile] procdump -p [PID] -D [저장할 디렉터리]
