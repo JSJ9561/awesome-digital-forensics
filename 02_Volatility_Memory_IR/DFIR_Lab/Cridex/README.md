@@ -287,9 +287,8 @@ Cache-Control: no-cache
 
 <img width="840" height="608" alt="KakaoTalk_Snapshot_20260715_013346" src="https://github.com/user-attachments/assets/076a43b7-e9c0-4f8e-80b0-e90abef97b29" />
 
-탐지: 34/70
-
-유형: 트로이 목마
+- 탐지: 34/70
+- 유형: 트로이 목마
 
 ## 보고서
 
