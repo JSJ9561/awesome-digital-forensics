@@ -6,6 +6,19 @@
 
 <img width="706" height="685" alt="KakaoTalk_Snapshot_20260713_234223" src="https://github.com/user-attachments/assets/2f6148b8-2871-4f12-a104-85e3abe606ca" />
 
+```
+시나리오
+1. imageinfo 명령어로 정보 확인
+2. ps 명령어로 프로세스 확인
+3. cmd 명령어로 입력 명령어 확인
+4. 인터넷 연결 상태 확인
+5. filescan, malfind, dlllist 확인
+6. dumpfiles 하기
+7. virustotal 활용
+8. memdump 명령어로 덤프 확인
+9. 분석
+```
+
 ### 1. imageinfo로 정보 확인
 
 <img width="830" height="240" alt="KakaoTalk_Snapshot_20260714_225718" src="https://github.com/user-attachments/assets/c245b131-2ffc-4686-bddf-eab5b3692cc2" />
