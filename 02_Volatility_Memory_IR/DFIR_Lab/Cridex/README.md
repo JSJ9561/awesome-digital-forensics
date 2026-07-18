@@ -81,11 +81,12 @@ wuauclt.exe: 윈도우 업데이트 확인, 다운로드 및 설치를 관리하
 
 > filescan에서 offset을 찾을 때 가장 먼저 실행된 offset을 찾는 것이 좋다.
 
+```
 explorer.exe PID: 1484
 reader_sl.exe PID: 1640
-
 explorer.exe offset: 0x0000000002030f90 
 reader_sl.exe offset: 0x00000000023ccf90
+```
 
 ### 5. connections, netscan, sockets 로그 저장하기
 
