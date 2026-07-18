@@ -89,8 +89,6 @@ reader_sl.exe offset: 0x00000000023ccf90
 
 ### 5. connections, netscan, sockets 로그 저장하기
 
-<img width="914" height="331" alt="KakaoTalk_Snapshot_20260715_000224" src="https://github.com/user-attachments/assets/14810097-06bb-4433-8574-b9b8c6c1ad0d" />
-
 > connections 확인결과 외부 네트워크로 연결된 흔적을 발견하였다.
 - Local Address: 172.16.112.128:1038
 - Remote Address: 41.168.5.140:8080
