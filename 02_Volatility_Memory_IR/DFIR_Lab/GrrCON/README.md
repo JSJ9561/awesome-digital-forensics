@@ -350,18 +350,11 @@ Administrator: C:\Program Files\Internet Explorer\iexplore.exe
 2. 피해자가 다운로드한 파일을 실행하면서 TeamViewer에 패치
 3. 피해자가 TeamViewer를 실행하는 순간 tv_w32.exe를 통한 원격접속
 4. 원격접속한 피해자의 TeamViwer cmd를 통한 iexplore 접속
-5. iexplore에서 sppsvc를 활용해 방화벽을 무력화
+5. iexplore에서 sppsvc를 활용해 방화벽을 무력화 
 6. wce.exe를 다운로드
 7. 원격접속한 피해자의 explorer.exe cmd를 통해 wce.exe를 실행
 8. 피해자 계정(gideon) 탈취
-
-### 침해 피해 예상 시나리오
-1. 탈취한 계정으로 인트라넷 접속
-2. 침해 예상 경로
-   1. 탈취한 계정을 통해 인트라넷 공유폴더에 AnyConnectInstaller 유포
-   2. 계정 내에 등록된 이메일들에 피싱메일 전송
-3. 다른 피해자도 동일한 방식으로 계정 탈취
-4. 사내 모든 계정 탈취 가능성 있음
+9. mstsc.exe를 통해 탈취한 계정을 활용하여 공격범위(인트라넷 내부) 확
 
 
 
