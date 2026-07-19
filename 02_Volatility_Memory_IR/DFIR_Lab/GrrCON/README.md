@@ -354,7 +354,7 @@ Administrator: C:\Program Files\Internet Explorer\iexplore.exe
 6. wce.exe를 다운로드
 7. 원격접속한 피해자의 explorer.exe cmd를 통해 wce.exe를 실행
 8. 피해자 계정(gideon) 탈취
-9. mstsc.exe를 통해 탈취한 계정을 활용하여 공격범위(인트라넷 내부) 확
+9. mstsc.exe를 통해 탈취한 계정을 활용하여 공격범위(인트라넷 내부) 확장
 
 
 
